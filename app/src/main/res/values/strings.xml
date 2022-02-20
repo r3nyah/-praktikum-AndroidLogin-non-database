@@ -1,3 +1,37 @@
 <resources>
-    <string name="app_name">LoginTest</string>
+    <string name="app_name">Intent Login</string>
+
+    <string name="move_activity">Pindah Activity</string>
+    <string name="move_activity_second">Biodata diri</string>
+    <string name="move_activity_third">Move data</string>
+    <string name="move_with_data">Pindah Activity dengan data</string>
+    <string name="move_with_object">Pindah Activity dengan Object</string>
+    <string name="dial_number">Dial a number</string>
+    <string name="move_with_result">Pindah Activity untuk Result</string>
+    <string name="result_from_activity">Hasil dari Activity</string>
+    <string name="choose_number">Pilih angka yang kamu suka</string>
+
+    <string name="_50">50</string>
+    <string name="_100">100</string>
+    <string name="_150">150</string>
+    <string name="_200">200</string>
+    <string name="choose">Pilih</string>
+    <string name="data_received">Data Diterima</string>
+    <string name="object_received">Object Diterima</string>
+    <string name="this_is_moveactivity">Selamat datang di MoveActivity</string>
+    <string name="this_is_moveactivity_second">Selamat datang di Fake MoveActivity</string>
+
+
+    <string name="nama">Nama</string>
+    <string name="TTL">TTL</string>
+    <string name="kelas">Kelas</string>
+    <string name="alamat">Alamat</string>
+    <string name="hobi">Hobi</string>
+    <string name="btn_calculate">save</string>
+    <string name="result"></string>
+    <string name="tvResult"></string>
+    <string name="tvResulta"></string>
+    <string name="tvResultb"></string>
+    <string name="tvResultc"></string>
+    <string name="tvResultd"></string>
 </resources>

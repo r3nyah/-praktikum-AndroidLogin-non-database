@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginTest">
         <activity
+            android:name=".MoveActivitySecond"
+            android:exported="false" />
+        <activity
+            android:name=".MoveActivity"
+            android:exported="false" />
+        <activity
             android:name=".Welcome"
             android:exported="false" />
         <activity
