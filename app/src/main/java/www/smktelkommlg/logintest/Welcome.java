@@ -14,6 +14,7 @@ import android.widget.Button;
 public class Welcome extends AppCompatActivity {
 
     Button btnExit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,12 +23,13 @@ public class Welcome extends AppCompatActivity {
         btnExit = (Button) findViewById(R.id.btnExit);
         Button btnMove = findViewById(R.id.btn_move_activity);
         Button btnBiodata = findViewById(R.id.btn_move_activity_second);
+        Button btnMoveData = findViewById(R.id.btn_move_activity_third);
         Button btnShare = findViewById(R.id.btnShare);
+
 
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //perintah untuk mengakhiri aplikasi
                 finish();
             }
         });
@@ -60,5 +62,25 @@ public class Welcome extends AppCompatActivity {
                 startActivity(Intent.createChooser(intent, "Share to :"));
             }
         });
+        btnMoveData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                person Manusia = new person("Arian", "arian@gmail.com", "Malang", 17);
+                //Manusia.setEmail("Arian@gmail.com");
+                //Manusia.setName("Arian");
+                //Manusia.setCity("Malang");
+                //Manusia.setAge(17);
+                //startActivity(new Intent(Welcome.this, MoveActivityThird.class));
+                Intent intent_object = new Intent(Welcome.this, MoveActivityThird.class);
+                intent_object.putExtra(MoveActivityThird.EXTRA_PERSON, Manusia);
+                startActivity(intent_object);
+
+            }
+        });
+
     }
+
+
+
+
 }
