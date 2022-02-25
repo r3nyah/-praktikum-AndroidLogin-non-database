@@ -3,6 +3,7 @@ package www.smktelkommlg.logintest;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 
@@ -25,6 +26,7 @@ public class Welcome extends AppCompatActivity {
         Button btnBiodata = findViewById(R.id.btn_move_activity_second);
         Button btnMoveData = findViewById(R.id.btn_move_activity_third);
         Button btnShare = findViewById(R.id.btnShare);
+        Button btnDial = findViewById(R.id.btnDial);
 
 
         btnExit.setOnClickListener(new View.OnClickListener() {
@@ -77,10 +79,15 @@ public class Welcome extends AppCompatActivity {
 
             }
         });
+        btnDial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phone = "+911";
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
+                startActivity(intent);
+            }
+        });
+        }
 
-    }
 
-
-
-
-}
+        }
