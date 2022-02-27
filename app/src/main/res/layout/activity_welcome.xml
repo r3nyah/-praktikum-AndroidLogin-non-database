@@ -35,9 +35,15 @@
         android:id="@+id/btnDial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dial a number "
-        android:gravity="center" />
+        android:layout_marginBottom="16dp"
+        android:text="Dial a number" />
 
+    <Button
+        android:id="@+id/btnMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Message" />
 
     <Button
         android:id="@+id/btnShare"

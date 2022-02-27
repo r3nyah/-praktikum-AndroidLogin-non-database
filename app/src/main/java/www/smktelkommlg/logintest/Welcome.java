@@ -27,6 +27,7 @@ public class Welcome extends AppCompatActivity {
         Button btnMoveData = findViewById(R.id.btn_move_activity_third);
         Button btnShare = findViewById(R.id.btnShare);
         Button btnDial = findViewById(R.id.btnDial);
+        Button btnMessage = findViewById(R.id.btnMessage);
 
 
         btnExit.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +86,12 @@ public class Welcome extends AppCompatActivity {
                 String phone = "+911";
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
                 startActivity(intent);
+            }
+        });
+        btnMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Welcome.this, MessageOne.class));
             }
         });
         }
