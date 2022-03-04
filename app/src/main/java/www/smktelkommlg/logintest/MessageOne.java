@@ -21,16 +21,16 @@ public class MessageOne extends Activity {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(MessageOne.this, MessageTwo.class);
-                startActivityForResult(intent, 2);// Activity is started with requestCode 2
+                startActivityForResult(intent, 2);
             }
         });
     }
 
-    // Call Back method  to get the Message form other Activity
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        // check if the request code is same as what is passed  here it is 2
+
         if (requestCode == 2) {
             String message = data.getStringExtra("MESSAGE");
             textView1.setText(message);

@@ -24,7 +24,7 @@ public class MessageTwo extends Activity {
                 Intent intent=new Intent();
                 intent.putExtra("MESSAGE",message);
                 setResult(2,intent);
-                finish();//finishing activity
+                finish();
             }
         });
     }

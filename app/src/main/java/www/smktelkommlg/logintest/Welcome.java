@@ -11,11 +11,13 @@ import android.os.Bundle;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
-public class Welcome extends AppCompatActivity {
+public class Welcome extends AppCompatActivity implements View.OnClickListener {
 
     Button btnExit;
-
+    private int REQUEST_CODE = 100;
+    private TextView tvResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,10 @@ public class Welcome extends AppCompatActivity {
         Button btnShare = findViewById(R.id.btnShare);
         Button btnDial = findViewById(R.id.btnDial);
         Button btnMessage = findViewById(R.id.btnMessage);
+        //Button btnMoveForResult = findViewById(R.id.btn_move_activity_fourth);
+        Button btnMoveForResult = findViewById(R.id.btn_move_activity_fourth);
+        btnMoveForResult.setOnClickListener(this);
+        tvResult = (TextView) findViewById(R.id.tv_result);
 
 
         btnExit.setOnClickListener(new View.OnClickListener() {
@@ -94,7 +100,28 @@ public class Welcome extends AppCompatActivity {
                 startActivity(new Intent(Welcome.this, MessageOne.class));
             }
         });
+
+        btnMoveForResult.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent moveForResultIntent = new Intent(Welcome.this,MoveActivityFourth.class);
+                startActivityForResult(moveForResultIntent,REQUEST_CODE);
+            }
+        });
+    }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode,resultCode,data);
+        if(requestCode==REQUEST_CODE){
+            if(resultCode==MoveActivityFourth.RESULT_CODE){
+                int selectValue = data.getIntExtra(MoveActivityFourth.EXTRA_SELECTED_VALUE,0);
+                tvResult.setText("Hasil = "+selectValue);
+            }
         }
+    }
 
 
-        }
+    @Override
+    public void onClick(View view) {
+
+    }
+}

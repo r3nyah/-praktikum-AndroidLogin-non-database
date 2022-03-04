@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Biodata diri" />
+        android:text="Biodata" />
 
     <Button
         android:id="@+id/btn_move_activity_third"
@@ -45,12 +45,31 @@
         android:layout_marginBottom="16dp"
         android:text="Message" />
 
+
+
     <Button
         android:id="@+id/btnShare"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Share "
         android:gravity="center" />
+
+    <Button
+        android:id="@+id/btn_move_activity_fourth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="@string/move_with_result" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_result"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:text="@string/result_from_activity" />
+
+
 
 
 
